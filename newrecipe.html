@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>        
+        <title>Title</title>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">Recipes</a>
+              </div>
+              <ul class="nav navbar-nav">
+                <li><a href="site.html">Home</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Main Dishes<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="vegetarian.html">Vegetarian</a></li>
+                    <li><a href="meat.html">Meat</a></li>
+                    <li><a href="soup.html">Soup</a></li>
+                    <li><a href="pasta.html">Pasta</a></li>
+                    <li><a href="othermain.html">Other</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Side Dishes<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="salad.html">Salad</a></li>
+                    <li><a href="grain.html">Grain</a></li>
+                    <li><a href="veggie.html">Vegetable</a></li>
+                    <li><a href="otherside.html">Other</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Baked Goods<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="desserts.html">Desserts</a></li>
+                    <li><a href="breads.html">Breads</a></li>
+                    <li><a href="otherbaked.html">Other</a></li>
+                  </ul>
+                </li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Other<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="drinks.html">Drinks</a></li>
+                    <li><a href="otherother.html">Other</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="newrecipe.html"><span class="glyphicon glyphicon-log-in"></span> New Recipe</a></li>
+              </ul>
+            </div>
+          </nav>
+
+        <div class="container"> 
+            <h4>Upload File</h4>
+            <form action="/file_page.php" method="post">
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Recipe File</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                </div>
+
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                </div>
+            </form>
+        </div> 
+
+        <hr>
+        <div class="container">
+            <h4>Input Recipe</h4>
+            <form action="form_page.php" method="POST">
+                <div class="input-group">
+                    <span class="input-group-addon col-auto"><i class="glyphicon glyphicon-pencil"></i></span>
+                    <input id="title" type="text" class="form-control" name="title" placeholder="Recipe Title">
+                </div>
+
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input id="name" type="text" class="form-control" name="name" placeholder="Person Name">
+                </div>
+                
+                <br>
+
+                <div class="form-group">
+                    <label for="ingredients">Ingredients:</label>
+                    <textarea class="form-control" rows="5" id="ingredients"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="directions">Directions:</label>
+                    <textarea class="form-control" rows="5" id="directions"></textarea>
+                </div>
+
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-2">Submit</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
